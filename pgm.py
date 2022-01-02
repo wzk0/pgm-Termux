@@ -33,7 +33,7 @@ if t == "0":
   sh = 'start-ubuntu.sh'
   if os.path.exists(sh):
     p("你好像已经安装过容器了...\n")
-    enter = input("是否直接进入[进入后请输入 apt install python3 ](y/n):")
+    enter = input("是否直接进入\n[进入后请输入 apt install python3 和 apt install wget ]\n(y/n):")
     if enter == "y":
       o(rq)
   else:
@@ -43,7 +43,7 @@ if t == "0":
     n()
     p("正在安装容器...")
     o(ubuntu)
-    enter = input("容器安装完成啦！是否直接进入[进入后请输入 apt install python3 ](y/n):")
+    enter = input("容器安装完成啦！是否直接进入\n[进入后请输入 apt install python3 和 apt install wget ]\n(y/n):")
     if enter == "y":
       o(rq)
 
