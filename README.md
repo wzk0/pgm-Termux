@@ -9,6 +9,7 @@
 ```
 pkg install git
 ```
+
 或者
 
 ```
@@ -20,6 +21,8 @@ pkg install wget
 ```
 git clone https://github.com/wzk0/pgm-Termux.git
 ```
+
+或者
 
 ```
 wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/pgm.py
