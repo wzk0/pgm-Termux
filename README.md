@@ -4,25 +4,22 @@
 
 ## 使用方法:
 
-* 首先在Termux安装wget以获取此脚本
+* 首先在Termux安装`wget`和`python`:
 
 ```
-pkg install wget
+apt update
+apt upgrade
+apt install wget
+apt install python
 ```
 
-然后
+* 然后获取该脚本:
 
 ```
 wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/pgm.py
 ```
 
-* 需安装python以执行脚本
-
-```
-pkg install python
-```
-
-然后
+* 执行:
 
 ```
 python3 pgm.py
