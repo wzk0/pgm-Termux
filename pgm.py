@@ -97,6 +97,7 @@ if t == "2":
     check()
     o(rq)
   else:
-    do = "nohup python3 -m pagermaid &"
+    p("正在启动...")
+    do = "python3 -m pagermaid"
     os.chdir("./pagermaid")
     o(do)
