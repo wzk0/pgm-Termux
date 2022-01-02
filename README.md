@@ -4,25 +4,13 @@
 
 ## 使用方法:
 
-* 首先在Termux安装git或wget以获取此脚本
-
-```
-pkg install git
-```
-
-或者
+* 首先在Termux安装wget以获取此脚本
 
 ```
 pkg install wget
 ```
 
 然后
-
-```
-git clone https://github.com/wzk0/pgm-Termux.git
-```
-
-或者
 
 ```
 wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/pgm.py
