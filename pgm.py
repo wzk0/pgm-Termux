@@ -50,7 +50,7 @@ if t == "0":
       o(rq)
 
 if t == "1":
-  if os.path.exists(sh):
+  if os.path.exists("./pagermaid/config.yml"):
     check()
     o(rq)
   else:
