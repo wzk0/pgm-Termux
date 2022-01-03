@@ -11,7 +11,7 @@ def o(action):
   os.system(action)
 
 def check():
-  print("警告:检测到不在容器内！将自动进入容器，请进入后再次使用脚本启动")
+  print("警告:检测到容器已存在或不在容器内！将尝试自动进入容器，请进入后再次使用脚本启动")
 
 pkg = "pkg update && pkg upgrade"
 ubuntu = "pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh"
@@ -28,7 +28,8 @@ yl = "pip3 install -r requirements.txt"
 copy = "cp config.gen.yml config.yml"
 edit = "nano config.yml"
 run = "python3 -m pagermaid"
-sh = 'start-ubuntu.sh'
+sh = '/data/data/com.termux/files/home/start-ubuntu.sh'
+pgm = "/root/pagermaid/config.yml"
 
 p("\n欢迎使用pgm-Termux脚本\n\n0)-安装容器  \n1)-安装pgm及其一切所需(进入容器后执行！！)  \n2)-启动pgm(需要先完成登陆) \n3)-退出")
 t = input("\n请输入序号:")
@@ -49,7 +50,7 @@ if t == "0":
       o(rq)
 
 if t == "1":
-  if os.path.exists("./pagermaid/config.yml"):
+  if os.path.exists(pgm):
     p("已经安装过pgm了！")
     o(rq)
   else:
@@ -90,7 +91,7 @@ if t == "1":
     o(run)
 
 if t == "2":
-  if not os.path.exists("./pagermaid/config.yml"):
+  if not os.path.exists(pgm):
     p("还没安装pagermaid！")
   else:
     do = "nohup python3 -m pagermaid &"
