@@ -11,13 +11,13 @@ def o(action):
   os.system(action)
 
 def check():
-  print("警告:检测到不在容器内！将自动进入容器，请进入后进行操作")
+  print("警告:检测到不在容器内！将自动进入容器，请进入后再次使用脚本启动")
 
 pkg = "pkg update && pkg upgrade"
 ubuntu = "pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh"
 rq = "./start-ubuntu.sh"
 apt = "apt-get update && apt-get upgrade"
-install = "apt install git -y && apt install python3-pip -y && apt install nano -y"
+install = "apt install git -y && apt install python3-pip -y && apt install nano-y"
 clone = "git clone https://github.com/xtaodada/PagerMaid-Modify.git pagermaid && cp pgm.py pagermaid"
 pic = "apt-get install imagemagick -y"
 sys = "apt-get install software-properties-common && add-apt-repository ppa:dawidd0811/neofetch && apt-get update && apt-get install neofetch"
@@ -29,7 +29,6 @@ copy = "cp config.gen.yml config.yml"
 edit = "nano config.yml"
 run = "python3 -m pagermaid"
 sh = 'start-ubuntu.sh'
-shut = "sys.exit(1)"
 
 p("\n欢迎使用pgm-Termux脚本\n\n0)-安装容器  \n1)-安装pgm及其一切所需(进入容器后执行！！)  \n2)-启动pgm(需要先完成登陆) \n3)-退出")
 t = input("\n请输入序号:")
@@ -51,7 +50,7 @@ if t == "0":
 
 if t == "1":
   if os.path.exists("./pagermaid/config.yml"):
-    check()
+    p("已经安装过pgm了！")
     o(rq)
   else:
     p("正在更新apt源...")
@@ -84,8 +83,6 @@ if t == "1":
     editor = input("是否编辑config[最上方ID填入数字，Hash填入字符串，不要删除冒号](y/n)")
     if editor =="y":
       o(edit)
-    else:
-      shut()
     n()
     p("编辑完成，正在读取...")
     n()
@@ -93,11 +90,9 @@ if t == "1":
     o(run)
 
 if t == "2":
-  if os.path.exists(sh):
-    check()
-    o(rq)
+  if not os.path.exists("./pagermaid/config.yml"):
+    p("还没安装pagermaid！")
   else:
-    p("正在启动...若终止请输入Ctrl C")
-    do = "python3 -m pagermaid"
+    do = "nohup python3 -m pagermaid &"
     os.chdir("./pagermaid")
     o(do)
