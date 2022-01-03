@@ -94,6 +94,7 @@ if t == "2":
   if not os.path.exists(pgm):
     p("还没安装pagermaid！")
   else:
-    do = "nohup python3 -m pagermaid &"
-    os.chdir("./pagermaid")
+    print("正在启动pgm...")
+    do = "python3 -m pagermaid"
+    os.chdir("/root/pagermaid")
     o(do)
