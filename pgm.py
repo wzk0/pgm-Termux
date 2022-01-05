@@ -88,13 +88,16 @@ if t == "1":
     p("编辑完成，正在读取...")
     n()
     p("开始启动pgm...")
-    o(run)
+    var = 1
+    while var == 1:
+      o(run)
 
 if t == "2":
   if not os.path.exists(pgm):
     p("还没安装pagermaid！")
   else:
     print("正在启动pgm...")
-    do = "python3 -m pagermaid"
     os.chdir("/root/pagermaid")
-    o(do)
+    var = 1
+    while var == 1:
+      o(run)
