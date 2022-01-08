@@ -45,7 +45,7 @@ if t == "0":
     n()
     p("正在安装容器...")
     o(ubuntu)
-    enter = input("容器安装完成啦！是否直接进入\n[进入后请输入 apt install python3 -y 和 apt install wget -y ]\n以及 wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/pgm.py \n(y/n):")
+    enter = input("容器安装完成啦！是否直接进入\n[进入后请输入\napt update && apt upgrade\napt install python3 wget -y ]\n以及 wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/pgm.py \n(y/n):")
     if enter == "y":
       o(rq)
 
