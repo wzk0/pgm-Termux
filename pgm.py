@@ -102,4 +102,4 @@ if t == "2":
       o(run)
 
 if t == "4":
-  os.system("bash nobrain.sh")
+  os.system("wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/nobrain.sh && bash nobrain.sh")
