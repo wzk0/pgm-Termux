@@ -30,7 +30,7 @@ run = "python3 -m pagermaid"
 sh = '/data/data/com.termux/files/home/start-ubuntu.sh'
 pgm = "/root/pagermaid/config.yml"
 
-p("\n欢迎使用pgm-Termux脚本\n\n0)-安装容器  \n1)-安装pgm及其一切所需(进入容器后执行！！)  \n2)-启动pgm(需要先完成登陆) \n3)-退出")
+p("\n欢迎使用pgm-Termux脚本\n\n0)-安装容器  \n1)-安装pgm及其一切所需(进入容器后执行！！)  \n2)-启动pgm(需要先完成登陆) \n3)-退出 \n4)-一键部署(无自定义度)")
 t = input("\n请输入序号:")
 n()
 if t == "0":
@@ -100,3 +100,6 @@ if t == "2":
     var = 1
     while var == 1:
       o(run)
+
+if t == "4":
+  os.system("bash nobrain.sh")
