@@ -1,11 +1,8 @@
-​clear 
-  
- ​printf​ ​"​当前环境:​" 
- ​pwd 
-  
- ​sleep 3s 
-  
- ​printf​ ​"​正在更新容器的apt...​" 
+​clear
+printf​ ​"​当前环境:​"
+pwd
+sleep 3s
+printf​ ​"​正在更新容器的apt...​"
 apt-get update -y ​&&​ apt-get upgrade -y
 printf​ ​"​正在安装相应软件...​"
 apt install git python3 python3-pip nano -y
