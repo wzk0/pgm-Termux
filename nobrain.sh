@@ -17,9 +17,15 @@ printf "正在安装相应软件并获取容器文件..."
 pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh
 
 printf "正在进入容器..."
+printf​ "​请输入以下指令: ​"
+printf​ "​apt update -y && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/after.sh && bash after.sh​"
+
 ./start-ubuntu.sh
+<<<<<<< HEAD
 
 clear
 
 printf "请输入以下指令: "
 printf "apt update -y && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/after.sh && bash after.sh"
+=======
+>>>>>>> 1f7a3e6 (添加了after)
