@@ -1,5 +1,7 @@
 # pgm-Termux脚本
 
+> Pagermaid项目存在Telegram封号风险（较大），请慎用！
+
 **适用于[博客文章](https://wzk0.github.io/pm)的一键(其实是两键🌚)脚本**
 
 ## 使用方法:
@@ -33,5 +35,5 @@ wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/nobrain.sh
 
 ## 关键点
 
-* 进入容器前后是两个不同的环境，所以进入前后必须分别获取一遍脚本.(`一键部署`方法则不必)
+* 进入容器前后是两个不同的环境，所以进入前后必须分别获取一遍脚本.
 
