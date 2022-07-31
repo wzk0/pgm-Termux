@@ -74,7 +74,6 @@ if t == "1":
     kexuan = input("是否安装所有可选软件包(y/n):")
     if kexuan == "y":
       o(pic)
-      o(sys)
       o(qr)
       o(light)
       o(task)
