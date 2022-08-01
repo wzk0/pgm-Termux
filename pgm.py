@@ -76,20 +76,30 @@ if t == "1":
     n()
   else:
     pass
-  editor = input("是否编辑config[最上方ID填入数字，Hash填入字符串，不要删除冒号](y/n)")
+  editor = input("是否编辑(编辑器使用nano,Ctrl O保存,随后回车,之后Ctrl X退出)config[最上方ID填入数字，Hash填入字符串，不要删除冒号](y/n)")
   if editor =="y":
     o(edit)
   n()
   p("编辑完成，正在读取...")
   n()
+  p('请选择启动模式:\n1.死循环(会一直尝试启动,第一次不建议)\n2. 启动一次')
+  cs=input('请输入序号:')
   p("开始启动pgm...")
-  while True:
+  if cs=='1':
+    while True:
+      o(run)
+  if cs=='2':
     o(run)
 
 if t == "2":
+  p('请选择启动模式:\n1.死循环(会一直尝试启动,第一次不建议)\n2. 启动一次')
+  cs=input('请输入序号:')
   print("正在启动pgm...")
   os.chdir("./pagermaid")
-  while True:
+  if cs=='1':
+    while True:
+      o(run)
+  if cs=='2':
     o(run)
 
 if t == "4":
