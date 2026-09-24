@@ -1,3 +1,5 @@
+
+
 # pgm-Termux脚本
 
 > Pagermaid项目存在Telegram封号风险（较大），请慎用！
@@ -29,6 +31,7 @@ python3 pgm.py
 
 ```
 wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/nobrain.sh
+bash nobrain.sh
 ```
 
 一键部署.
@@ -36,4 +39,3 @@ wget https://raw.githubusercontent.com/wzk0/pgm-Termux/main/nobrain.sh
 ## 关键点
 
 * 进入容器前后是两个不同的环境，所以进入前后必须分别获取一遍脚本.
-
